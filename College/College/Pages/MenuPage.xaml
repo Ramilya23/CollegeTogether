@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College.Pages.MenuPage"
+             Title="MenuPage">
+    <VerticalStackLayout Spacing="5">
+        <!--<ImageButton Source="back.png"></ImageButton>-->
+        <StackLayout Orientation="Horizontal">
+            <Button ImageSource="back.png" HorizontalOptions="Start" Margin="5,0,5,0" BackgroundColor="#E0EFFF" Clicked ="Button_Clicked" ContentLayout="Right,20">
+
+            </Button>
+            <SearchBar BackgroundColor="#E0EFFF" HorizontalOptions="FillAndExpand"></SearchBar>
+        </StackLayout>
+        <Button x:Name="ProfileButton" Clicked="ProfileButton_Clicked" BackgroundColor="#E0EFFF" Text="Профиль" TextColor="Black" Margin="5,0,5,0"></Button>
+        <Button BackgroundColor="#E0EFFF" Text="Настройки" TextColor="Black" Margin="5,0,5,0"></Button>
+        <Button BackgroundColor="#E0EFFF" Text="Клубы" TextColor="Black" Margin="5,0,5,0"></Button>
+        <Button BackgroundColor="#E0EFFF" Text="Чаты" TextColor="Black" Margin="5,0,5,0"></Button>
+    </VerticalStackLayout>
+</ContentPage>

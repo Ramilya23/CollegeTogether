@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College.AuthorizationPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryRegStyle" TargetType="Entry" >
+                <Setter Property="Margin" Value="8"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="BackgroundColor" Value="#E7EDF0"/>
+                <Setter Property="MaximumWidthRequest" Value="300"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+            <Image
+            Source="logo.png"
+            WidthRequest="100"
+            >
+
+            </Image>
+            <Border Stroke="#BFD1EB" BackgroundColor="#BFD1EB">
+                <Border.StrokeShape >
+                    <RoundRectangle CornerRadius="20">
+                    </RoundRectangle>
+                </Border.StrokeShape>
+                <VerticalStackLayout
+                    BackgroundColor="#BFD1EB"
+                    Padding="20">
+                    <Label
+                Text="Авторизация"
+                TextColor="Black"
+                FontSize="24"
+                HorizontalOptions="Center"
+                />
+                    <Entry
+                x:Name="EntryStudNum"
+                Placeholder="Номер студ. билета"
+                FontSize="12"
+                Style="{StaticResource EntryRegStyle}"
+                >
+                    </Entry>
+
+                    <Entry
+                x:Name="EntryStudEmail"
+                HorizontalOptions="Fill"
+                Placeholder="Почта"
+                FontSize="12"
+                Style="{StaticResource EntryRegStyle}">
+
+                    </Entry>
+
+                    <Entry
+                x:Name="EntryStudPass"
+                Placeholder="Пароль"
+                FontSize="12"
+                Style="{StaticResource EntryRegStyle}">
+
+                    </Entry>
+
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button
+                x:Name="Enter"
+                Text="Войти" 
+                BackgroundColor="#7e9fcf"
+              Clicked="Authentication"
+                HorizontalOptions="Fill"
+                WidthRequest="300"/>
+
+            <Button
+                Text="Нет аккаунта?"
+                FontSize="11"
+                TextColor="#c3c3c3"
+                Clicked="GoRegBtn"
+                BackgroundColor="#ffffff"
+                WidthRequest="200"
+             
+                >
+            </Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

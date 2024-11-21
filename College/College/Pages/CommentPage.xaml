@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College.Pages.CommentPage"
+             Title="CommentPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonAnswerStyle" TargetType="Button" >
+                <Setter Property="TextColor" Value="#004D40" />
+                <Setter Property="BackgroundColor" Value="#80CBC4" />
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="MaximumWidthRequest" Value="200"/>
+                <Setter Property="MaximumWidthRequest" Value="200"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout VerticalOptions="FillAndExpand"  Orientation="Vertical">
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="ОБСУЖДЕНИЕ ЧЕГО-ТО НАСТОЛЬКО ВАЖНОГО ЧТО ЭТО ЗАНИМАЕТ НЕМЕРЕННО 
+               МНОГО ТЕКСТА НА ЭКРАНЕ, ПОЭТОМУ МЫ БУДЕМ ИСПОЛЬЗОВАТЬ ЭТО ДЛЯ ТЕСТИРОВАНИЯ 
+               ТОГО КАК УДАЧНО ПЕРЕНОСИСТЯ ТЕКСТ, НА КОТОРОМ МЫ РЕАЛИЗУЕМ СИСТЕМУ 
+               ОБСУЖДЕНИЯ"></Label>
+        </StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="0,0,0,200">
+            <StackLayout x:Name="CommentsStack">
+                <!-- Блоки комментариев будут добавляться сюда -->
+            </StackLayout>
+        </ScrollView>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Button
+                Clicked="Button_Clicked">
+                
+            </Button>
+            <Entry 
+            x:Name="InputComment" 
+            Placeholder="Комментарий..." 
+            PlaceholderColor="Gray" 
+            MaximumWidthRequest="200" 
+             
+       />
+
+            <Button  
+        Text="Добавить комментарий" 
+        Clicked="AddComment"
+        HorizontalOptions="Center" 
+        VerticalOptions="End" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

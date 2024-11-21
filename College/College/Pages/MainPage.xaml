@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College.MainPage"
+             >
+
+    <StackLayout Padding="0,200,0,0">
+        <Image HeightRequest="200" Source="logo.png"></Image>
+        <Label FontSize="20" TextColor="#0F4265" HorizontalTextAlignment="Center" Text="Колледж:Вместе" />
+        <ProgressBar x:Name="progressBar" Progress="0.1" 
+                     HeightRequest="10" 
+                     WidthRequest="100"
+                     BackgroundColor="LightGray" 
+                     ProgressColor="SteelBlue"  />
+
+
+    </StackLayout>
+</ContentPage>
+<!--<Label
+   Text="Колледж:вместе" 
+     FontSize="20"
+     TextColor="#0F4265"
+     HorizontalOptions="Center"/>
+<Button
+     x:Name="CounterBtn"
+     Tex
+           HorizontalOptions=t="Click me" 
+    
+    Clicked="OnCounterClicked" />-->

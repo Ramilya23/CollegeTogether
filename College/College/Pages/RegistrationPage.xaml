@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College.Pages.RegistrationPage"
+             Title="RegistrationPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryRegStyle" TargetType="Entry" >
+                <Setter Property="Margin" Value="8"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="BackgroundColor" Value="#E7EDF0"/>
+                <Setter Property="WidthRequest" Value="300"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="logo.png"
+                WidthRequest="100"
+                HorizontalOptions="Center"
+                >
+
+            </Image>
+            <Border Stroke="#BFD1EB" BackgroundColor="#BFD1EB">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20">
+                    </RoundRectangle>
+                </Border.StrokeShape>
+
+                <VerticalStackLayout
+                BackgroundColor="#BFD1EB"
+                Padding="20"
+                >
+
+
+                    <Label
+                Text="Регистрация"
+                TextColor="Black"
+                FontSize="32"
+                HorizontalOptions="Center"
+             />
+
+                    <Entry
+                Placeholder="Фамилия"
+                FontSize="12"
+                x:Name="EntrySurname"
+                Style="{StaticResource EntryRegStyle}">
+
+                    </Entry>
+
+                    <Entry
+                Placeholder="Имя"
+                FontSize="12"
+                x:Name="EntryName"
+                Style="{StaticResource EntryRegStyle}">
+                    </Entry>
+
+                    <Entry
+                Placeholder="e-mail"
+                FontSize="12"
+                x:Name="EntryEmail"
+                Style="{StaticResource EntryRegStyle}">
+                    </Entry>
+
+                    <Entry
+                Placeholder="Введите пароль"
+                IsPassword="True"
+                FontSize="12"
+                x:Name="EntryPassword"
+                Style="{StaticResource EntryRegStyle}">
+                    </Entry>
+
+                    <Entry
+                Placeholder="Повторите пароль"
+                IsPassword="True"
+                FontSize="12"
+                x:Name="EntryRepeatPassword"
+                Style="{StaticResource EntryRegStyle}">
+                    </Entry>
+
+
+
+                </VerticalStackLayout>
+
+            </Border>
+            <Button
+                x:Name="Enter"
+                Text="Зарегистрировать" 
+                BackgroundColor="#7e9fcf"
+                Clicked="Register"
+                HorizontalOptions="Fill"
+                WidthRequest="300"/>
+            <Button
+                Text="Уже зарегестрированы?"
+                FontSize="11"
+                TextColor="#c3c3c3"
+                BackgroundColor="#ffffff"
+                WidthRequest="200"
+                Clicked="GoAuthBtn"
+                >
+            </Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

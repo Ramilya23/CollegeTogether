@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College.Pages.NewsPage"
+             Title="NewsPage">
+    <ContentPage.Resources>
+        <Style TargetType="Border" x:Key="commentBorderNew">
+            <Setter Property="StrokeShape" Value="RoundRectangle 0,0,20,20"/>
+        </Style>
+        <Style TargetType="Border" x:Key="BorderNew">
+            <Setter Property="Padding" Value="20,20,20,20"/>
+            <Setter Property="Stroke" Value="#3D495C"/>
+            <Setter Property="HeightRequest" Value="350"/>
+            <Setter Property="BackgroundColor" Value="#BFD1EB"/>
+            <Setter Property="StrokeShape" Value="RoundRectangle 20,20,0,0"/>
+        </Style>
+        <Style TargetType="Image" x:Key="ImageNews">
+            <Setter Property="BackgroundColor" Value="#3D495C"/>
+            <Setter Property="HeightRequest" Value="250"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="FillAndExpand" x:Name="ListPosts" Spacing="10" >
+
+            <StackLayout Orientation="Horizontal" Padding="10" VerticalOptions="Center" Spacing="7">
+                <Button ImageSource="menu.png" BackgroundColor="Red" WidthRequest="30" HeightRequest="25" Clicked="OnMenuButtonClicked" ContentLayout="Right,20">
+                </Button>
+
+                <Border BackgroundColor="#CDE2FF" HorizontalOptions="FillAndExpand">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="15"></RoundRectangle>
+                    </Border.StrokeShape>
+
+         
+                    <SearchBar x:Name="searchBar"
+              Placeholder="Новостная лента"                         
+              PlaceholderColor="#384296"
+              BackgroundColor="Transparent"
+              TextChanged="searchBar_TextChanged"
+              MaximumHeightRequest="300"
+              />
+
+                </Border>
+             
+                <Button/>
+            </StackLayout>
+          
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

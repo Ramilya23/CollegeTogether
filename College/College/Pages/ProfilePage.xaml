@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="College.Pages.ProfilePage"
+             Title="ProfilePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelsOfProfile" TargetType="Label" >
+                <Setter Property="BackgroundColor" Value="#E1EEFF" />
+                <Setter Property="TextColor" Value="#1C0D51"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+             
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="FillAndExpand">
+
+            <HorizontalStackLayout >
+                <ImageButton 
+             Source="backbutton.png"
+             BackgroundColor="#8FAFDF"
+             HorizontalOptions="Start">
+                </ImageButton>
+            </HorizontalStackLayout>
+            <Label 
+         FontSize="20"
+         Text="ВАШ ПРОФИЛЬ"
+         HorizontalOptions="Center">
+            </Label>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <VerticalStackLayout Spacing="10" HorizontalOptions="FillAndExpand">
+
+                    <Label
+                        HeightRequest="40"
+                 Style="{StaticResource LabelsOfProfile}"
+                 Text="Токарева Мария"
+                     x:Name="ProfileName">
+
+                    </Label>
+                    <Label
+                 Style="{StaticResource LabelsOfProfile}"
+                 Text="9ИСП-32-22">
+                    </Label>
+                    <Label
+                 Style="{StaticResource LabelsOfProfile}"
+                        HorizontalOptions="Fill"
+                 Text="Студент(ка)">
+                    </Label>
+
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="В сети">
+                        
+                    </Label>
+                </VerticalStackLayout>
+
+                <Image Source="logo.png"
+WidthRequest="170"
+                     HorizontalOptions="EndAndExpand">
+
+                </Image>
+
+
+            </HorizontalStackLayout>
+            <Label
+         Text="Мои интересы"
+         TextColor ="#1C0D51"
+         FontSize="20"
+          Margin="10">
+            </Label>
+
+            <Entry Margin="20,0,20,0"
+          
+HeightRequest="200"
+VerticalTextAlignment="Start"
+Placeholder="Коротко обо мне..."
+MaxLength="250"
+       TextChanged="Entry_TextChanged_1"
+     BackgroundColor="#E1EEFF" 
+        ></Entry>
+
+            <Border Margin="20,0,20,0" Stroke="#E1EEFF" BackgroundColor="#E1EEFF" >
+                    <Border.StrokeShape >
+                        <RoundRectangle CornerRadius="0,0,20,20" />
+                    </Border.StrokeShape>
+              
+            <Label  Margin="0,0,5,0" x:Name="LimitTextLabel" HorizontalOptions="EndAndExpand" Text="0/250"></Label>
+            </Border>
+
+            <Label
+             Text="Интересующие меня теги"
+             TextColor ="#1C0D51"
+             FontSize="20"
+             Margin="10">
+            </Label>
+            <Border Margin="20,0,20,0" Stroke="#E1EEFF" BackgroundColor="#E1EEFF" >
+                <Border.StrokeShape >
+                    <RoundRectangle CornerRadius="20,20,0,0" />
+                </Border.StrokeShape>
+                <StackLayout Orientation="Horizontal">
+                    <Entry
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="Начни вводить, чтобы добавить"
+                        TextChanged="Entry_TextChanged">
+
+                    </Entry>
+                    <Button
+                        Text=">"
+                        FontSize="20"
+                        TextColor="Black"
+                        x:Name="buttonAddTag"
+                        IsVisible="False"
+                        BackgroundColor="Transparent"></Button>
+                </StackLayout>
+
+            </Border>
+            <Border Margin="20,0,20,0" Stroke="#E1EEFF" BackgroundColor="#E1EEFF" HeightRequest="200">
+                <Border.StrokeShape >
+                    <RoundRectangle CornerRadius="0,0,20,20" />
+                </Border.StrokeShape>
+
+                <HorizontalStackLayout VerticalOptions="EndAndExpand">
+                    <Border Stroke="#E1EEFF" 
+                     BackgroundColor="#7AA3FC" 
+                     HeightRequest="30"
+                     WidthRequest="120">
+                        <Border.StrokeShape >
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label 
+                     HorizontalOptions="Center"
+                     Text="Исккусство"
+                     TextColor="#1C0D51"
+                     VerticalOptions="Center">
+                        </Label>
+                    </Border>
+                    <Border>
+                    </Border>
+                    <Border Stroke="#E1EEFF" 
+                     BackgroundColor="#7AA3FC" 
+                     HeightRequest="30"
+                     WidthRequest="120">
+                        <Border.StrokeShape >
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label
+                     HorizontalOptions="Center"
+                     Text="Спорт"
+                     TextColor="#1C0D51"
+                     VerticalOptions="Center">
+                        </Label>
+                    </Border>
+
+                    <Border Stroke="#E1EEFF" 
+                     BackgroundColor="#7AA3FC" 
+                     HeightRequest="30"
+                     WidthRequest="120">
+                        <Border.StrokeShape >
+                            <RoundRectangle CornerRadius="20" />
+                        </Border.StrokeShape>
+                        <Label 
+                     HorizontalOptions="Center"
+                     Text="Робототехника"
+                     TextColor="#1C0D51"
+                     VerticalOptions="Center">
+                        </Label>
+                    </Border>
+                </HorizontalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
